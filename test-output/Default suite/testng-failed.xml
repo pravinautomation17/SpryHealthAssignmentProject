@@ -7,7 +7,6 @@
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="scheduleTrainTest"/>
           <include name="validatePNRTest"/>
         </methods>
       </class> <!-- com.spryhealth.assignment.testcases.IndianRailwayAutomation -->

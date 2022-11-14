@@ -2,8 +2,6 @@ package com.spryhealth.assignment.testcases;
 
 import java.io.IOException;
 import java.time.Duration;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -69,7 +67,7 @@ public class IndianRailwayAutomation {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		
 		int rowCount=ExcelUtility.getRowCount("ScheduleTrainTest");
-		int columnCount=ExcelUtility.getColumnCount("ScheduleTrainTest",0);
+		//int columnCount=ExcelUtility.getColumnCount("ScheduleTrainTest",0);
 		
 		
 		for(int i=1; i<=rowCount;i++)
@@ -78,7 +76,7 @@ public class IndianRailwayAutomation {
 			autoOptions.sendKeys(ExcelUtility.getData("ScheduleTrainTest", i, 0));
 			
 			driver.findElement(By.xpath("//li[@class='ui-menu-item']//a[text()='14524 - HARIHAR EXPRESS']")).click();
-			List<WebElement> options= driver.findElements(By.xpath("//li[@class='ui-menu-item']"));
+			//List<WebElement> options= driver.findElements(By.xpath("//li[@class='ui-menu-item']"));
 			
 			/*for(WebElement element: options)
 			{
